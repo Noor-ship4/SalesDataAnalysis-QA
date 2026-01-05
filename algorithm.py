@@ -9,7 +9,11 @@ If (salesData is invalid OR inventoryData is invalid) then
     End
 End If
 
+Set productCount = 0
+
 For each product in salesData do
+    productCount = productCount + 1
+
     If (salesQuantity > threshold) then
         Mark product as "Best Seller"
     Else
