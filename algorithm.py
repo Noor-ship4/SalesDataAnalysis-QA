@@ -11,10 +11,12 @@ End If
 
 For each product in salesData do
     If (salesQuantity > threshold) then
-        Mark product as "Best Seller"
-    Else
-        Mark product as "Normal Product"
-    End If
+    Mark product as "Best Seller"
+Else If (salesQuantity >= 50) then
+    Mark product as "Average Seller"
+Else
+    Mark product as "Low Seller"
+End If
 
     Update sales and inventory records
 End For
