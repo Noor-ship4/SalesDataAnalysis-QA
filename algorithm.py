@@ -9,10 +9,10 @@ def validate_data(sales_data, threshold):
 def classify_products(sales_data, threshold):
     results = []
     for product in sales_data:
-        if product["qty"] >= threshold: 
-    label = "Best Seller"
+        if product["qty"] > threshold:
+    label = "Top Product"        
 else:
-    label = "Normal Product"
+    label = "Standard Product"  
 
         results.append({"name": product["name"], "qty": product["qty"], "label": label})
     return results
